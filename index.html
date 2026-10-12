@@ -72,7 +72,7 @@ var basemaps = {
 L.control.layers(basemaps).addTo(map);
 
             var cafeteriaIcon = L.icon({
-    iconUrl: 'tableware.png', // url that links to the icon image file, saved in the same folder as the current page 
+    iconUrl: 'cutlery.png', // url that links to the icon image file, saved in the same folder as the current page 
     iconSize:     [20, 20], // size of the icon image in pixels
     iconAnchor:   [2, 2], // the top left corner of the icon will be aligned so that this point is at the marker's geographical location
     popupAnchor:  [0, -10] // point from which the popup should open, relative to the iconAnchor
@@ -107,9 +107,9 @@ L.control.layers(basemaps).addTo(map);
 });
     
 var marker1 = L.marker([41.98248, -87.71855], {icon: classroomIcon, alt: 'Classroom Building'}).addTo(map);
-var marker2 = L.marker([41.9805, -87.7173], {icon: classroomIcon, alt: 'Bernard Brommel Hall'}).addTo(map);
-var marker3 = L.marker([41.981401, -87.718724], {icon: cafeteriaIcon, alt: 'Cafeteria Building'}).addTo(map);
-var marker4 = L.marker([41.980426, -87.719172], {icon: libraryIcon, alt: 'Library'}).addTo(map);
+var marker2 = L.marker([41.9805, -87.7171], {icon: classroomIcon, alt: 'Bernard Brommel Hall'}).addTo(map);
+var marker3 = L.marker([41.9815, -87.718724], {icon: cafeteriaIcon, alt: 'Cafeteria Building'}).addTo(map);
+var marker4 = L.marker([41.9805, -87.7193], {icon: libraryIcon, alt: 'Library'}).addTo(map);
 var marker5 = L.marker([41.97969, -87.7199], {icon: nestIcon, alt: 'Nest'}).addTo(map);
 var marker6 = L.marker([41.97798, -87.71743], {icon: sportIcon, alt: 'PE Complex Building'}).addTo(map);
 
