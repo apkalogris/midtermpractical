@@ -52,14 +52,14 @@
         <script type="text/javascript">
 
           var map = L.map('map', {
-              center: [41.98, -87.718547],
+              center: [41.979, -87.718547],
               zoom: 16
           });
 
-var terrain = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-   attribution: 'Tiles © Esri — Esri, DeLorme, NAVTEQ, TomTom',
-   maxZoom: 19,
-   minZoom: 0
+var canvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+   attribution: 'Tiles © Esri — Esri, DeLorme, NAVTEQ',
+   maxZoom: 11,
+   minZoom: 5
 }).addTo(map);
 
 var imagery = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -97,13 +97,13 @@ var nasa = L.tileLayer.wms('https://gibs.earthdata.nasa.gov/wms/epsg3857/best/wm
 }).addTo(map);
 
 var basemaps = {
-    "World Terrain": terrain,
+    "Light Gray Canvas": canvas,
     "Satellite Imagery": imagery
 };
 
 var overlaymaps = {
-    "Chicago Community Area (Pop Density)": communityareas,
-    "NASA Imagery (2m Temp Monthly Average)": nasa
+    "London Boroughs": boroughs,
+    "NASA Imagery": nasa
 };
             
 L.control.layers(basemaps, overlaymaps).addTo(map);
