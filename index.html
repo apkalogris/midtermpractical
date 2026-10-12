@@ -100,13 +100,8 @@ var basemaps = {
     "Light Gray Canvas": canvas,
     "Satellite Imagery": imagery
 };
-
-var overlaymaps = {
-    "London Boroughs": boroughs,
-    "NASA Imagery": nasa
-};
             
-L.control.layers(basemaps, overlaymaps).addTo(map);
+L.control.layers(basemaps).addTo(map);
             
 // Removing the legend when the layer is removed
 map.on('overlayremove', function(eventLayer){
